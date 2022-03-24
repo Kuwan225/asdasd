@@ -1,0 +1,21 @@
+.container-signup {
+  width: 500px;
+  margin-top: 50px;
+  position: relative;
+  .input-name {
+    display: flex;
+    gap: 15px;
+  }
+}
+.register-mata {
+  position: relative;
+  width: 100%;
+}
+.validateError {
+  color: rgb(173, 0, 0);
+  margin: -10px 0 10px 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

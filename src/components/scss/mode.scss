@@ -1,0 +1,43 @@
+.container-modes {
+  .form-mode {
+    position: absolute;
+    top: 40px;
+    left: 12px;
+    width: 160px;
+    background-color: #ffbb00;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    animation: zoom 0.5s;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    flex-direction: column;
+    span {
+      position: absolute;
+      right: 1px;
+      top: 1px;
+      background-color: #375e97;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      font-size: 13px;
+      border-radius: 20%;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+        color: #375e97;
+      }
+    }
+    input {
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    label {
+      cursor: pointer;
+    }
+  }
+}

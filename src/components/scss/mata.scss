@@ -1,0 +1,17 @@
+.eye {
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  .no-hide,
+  .hide {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    font-size: 30px;
+    color: grey;
+    cursor: pointer;
+  }
+  .hide {
+    color: #375e97;
+  }
+}

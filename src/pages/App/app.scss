@@ -1,0 +1,82 @@
+$primary-color: #375e97;
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: url(../../image/wave.svg) $primary-color;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+// animasi
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes hidemenu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes topToBottom {
+  0% {
+    transform: translateY(-90px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes bottomToTop {
+  0% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bottomToTopNohide {
+  0% {
+    transform: translateY(140px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-80px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes kecilKeBesar {
+  0% {
+    transform: scale(50%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes besarKeKecil {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(45%);
+  }
+}
