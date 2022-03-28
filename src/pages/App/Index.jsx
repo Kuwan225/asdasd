@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Change_password from "../Change_password/Change_password";
 import Profil from "../Profil/Index";
+import NoPages from "../No_pages/Index";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/profil" element={<Profil />} />
         <Route path="/register" element={<Register />} />
         <Route path="/change_password" element={<Change_password />} />
+        <Route path="*" element={<NoPages />} />
       </Routes>
     </div>
   );

@@ -74,7 +74,7 @@ const Todolist = ({ mode }) => {
                   )
               )
             ) : (
-              <p className="null">No data</p>
+              <p className="null">Tidak ada data</p>
             )}
           </div>
           <p className="text">Complete</p>
@@ -98,7 +98,7 @@ const Todolist = ({ mode }) => {
                   )
               )
             ) : (
-              <p className="null">No data</p>
+              <p className="null">Tidak ada data</p>
             )}
           </div>
         </div>

@@ -2,12 +2,45 @@
   width: 100vw;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  .hideImage {
+    backdrop-filter: blur(10px);
+    position: fixed;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.555);
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .close {
+      position: absolute;
+      top: 0;
+      left: 0;
+      .icon {
+        font-size: 40px;
+        color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+    img {
+      width: 40vw;
+    }
+  }
   .content-profil {
     width: 100%;
     display: flex;
     justify-content: center;
     animation: hidemenu 0.7s;
     padding: 20px 0;
+
     .content {
       width: 96%;
       border: 2px solid rgb(255, 255, 255);
@@ -30,10 +63,31 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        .img {
-          width: 150px;
-          height: 150px;
-          border-radius: 50%;
+        .images {
+          position: relative;
+          .img,
+          .lihat-gambar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+          }
+
+          .lihat-gambar {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.308);
+            backdrop-filter: blur(5px);
+            text-align: center;
+            line-height: 155px;
+            position: absolute;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            top: 0;
+          }
+        }
+        .images:hover .lihat-gambar {
+          display: block;
         }
         .changeOptionImg {
           width: 220px;

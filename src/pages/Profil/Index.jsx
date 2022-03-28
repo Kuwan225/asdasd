@@ -8,7 +8,7 @@ import decode from "jwt-decode";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Mode from "../../components/Mode";
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+import { MdClose, MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 const Profil = () => {
   const Navigate = useNavigate();
@@ -22,6 +22,7 @@ const Profil = () => {
   const [modeOption, setModeOption] = useState(false);
   const getMode = localStorage.getItem("mode");
 
+  const [hideImg, setHideImg] = useState(false);
   const [dataImage, setDataImage] = useState("");
   const [image, setImage] = useState("");
   const [changeImage, setChangeImage] = useState(image);
@@ -73,9 +74,22 @@ const Profil = () => {
   const modeHandler = () => {
     setModeOption(true);
   };
+
+  const lihatGambar = () => {
+    setHideImg(true);
+  };
+
   return (
     <div className="container-profil">
       <MenuBar profil="aktif" />
+      {hideImg && (
+        <div className="hideImage">
+          <div className="close">
+            <MdClose className="icon" onClick={() => setHideImg(false)} />
+          </div>
+          <img src={image} />
+        </div>
+      )}
       <div className="content-profil">
         <div className="content">
           <div className="mode" onClick={modeHandler}>
@@ -90,9 +104,16 @@ const Profil = () => {
           {modeOption && <Mode setMode={setModeOption} />}
           <div className="content-img">
             {dataImage ? (
-              <img src={image} className="img" />
+              <div className="images">
+                <img src={image} className="img" />
+                <div className="lihat-gambar" onClick={lihatGambar}>
+                  Lihat...
+                </div>
+              </div>
             ) : (
-              <img src={nullImage} className="img" />
+              <div className="images">
+                <img src={nullImage} className="img" />
+              </div>
             )}
             <div className="changeOptionImg">
               <div className="changeImg">

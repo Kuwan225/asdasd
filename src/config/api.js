@@ -112,7 +112,7 @@ export default {
         })
         .catch((err) => {
           console.log("gagal");
-          notif.error("upload dulu bang");
+          notif.error("Anda belum memilih gambar");
           reject(false);
         });
     });
